@@ -5,9 +5,10 @@ import { createClient } from '@supabase/supabase-js';
 
 export class Supabase {
     
-    supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
+    supabaseKey = process.env.SUPABASE_KEY;
+    supabaseUrl = process.env.SUPABASE_URL!;
     public supabase = createClient(
-        'https://qaujdkgbydkyuvxlyaqu.supabase.co',
+        this.supabaseUrl,
         this.supabaseKey!
         );
         

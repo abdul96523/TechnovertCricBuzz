@@ -1,3 +1,5 @@
+import { PlayerType } from "../enums/Match";
+
 export interface Match {
   id: string;
   vs: string;
@@ -38,6 +40,18 @@ export interface Ball {
   symbol: string;
 }
 
-export interface Team { }
+export interface Team { 
+  id: string,
+  name: string,
+  players: Player[],
+  logo: string,
+  captainId: string
+}
 
-export interface Player { }
+export interface Player { 
+  id: string,
+  name: string,
+  jerseyNumber: string,
+  playerType: PlayerType,
+  teamName: string
+}
